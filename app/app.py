@@ -3,15 +3,11 @@ import os
 
 # Add project root to Python path
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-<<<<<<< HEAD
 from src.agent.chat_with_data import chat_with_data
-=======
->>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
 import streamlit as st
 import pandas as pd
 from src.monitoring.report import generate_data_quality_report
 from src.cleaning.cleaning_pipeline import clean_data
-<<<<<<< HEAD
 from src.agent.llm_explainer import generate_ai_insight
 from src.utils.visualization import show_dashboard
 from src.utils.pdf_generator import generate_pdf
@@ -57,21 +53,12 @@ input {
 
 # Page config
 st.set_page_config(page_title="Data Guardian AI", layout="wide")
-=======
-
->>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
 
 if "cleaned_df" not in st.session_state:
     st.session_state.cleaned_df = None
 
 if "cleaning_report" not in st.session_state:
     st.session_state.cleaning_report = None
-<<<<<<< HEAD
-=======
-# Page config
-st.set_page_config(page_title="Data Guardian AI", layout="wide")
-
->>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
 
 # Title
 st.title("🛡️ Data Guardian AI")
@@ -81,7 +68,6 @@ st.write("Autonomous Data Quality & Debugging System")
 uploaded_file = st.file_uploader("📂 Upload your dataset (CSV)", type=["csv"])
 
 if uploaded_file is not None:
-<<<<<<< HEAD
     
     df = pd.read_csv(uploaded_file)
 
@@ -91,14 +77,6 @@ if uploaded_file is not None:
     st.dataframe(df.head())
     show_dashboard(df)
      
-=======
-    df = pd.read_csv(uploaded_file)
-
-    # Preview
-    st.subheader("📊 Dataset Preview")
-    st.dataframe(df.head())
-
->>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
     # ✅ SCAN BUTTON
     if st.button("🔍 Scan Data"):
         report = generate_data_quality_report(df)
@@ -109,17 +87,9 @@ if uploaded_file is not None:
         report = st.session_state.report
 
         col1, col2 = st.columns(2)
-<<<<<<< HEAD
         with col1:
             st.subheader("🚨 Missing Values")
             st.dataframe(report["missing_values"])
-=======
-
-        with col1:
-            st.subheader("🚨 Missing Values")
-            st.dataframe(report["missing_values"])
-
->>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
         with col2:
             st.subheader("🔁 Duplicates")
             st.write(f"Total Duplicates: {report['duplicates']['total_duplicates']}")
@@ -129,16 +99,12 @@ if uploaded_file is not None:
 
         # ✅ AUTO CLEAN BUTTON (SEPARATE)
         if st.button("🧹 Auto Clean Data"):
-<<<<<<< HEAD
             st.write("Cleaning started...")
-=======
->>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
             cleaned_df, cleaning_report = clean_data(df)
 
             st.session_state.cleaned_df = cleaned_df
             st.session_state.cleaning_report = cleaning_report
 
-<<<<<<< HEAD
         # ✅ SHOW CLEANED DATA (OUTSIDE BUTTON)
         if st.session_state.cleaned_df is not None:
             cleaned_df = st.session_state.cleaned_df
@@ -219,12 +185,3 @@ if uploaded_file is not None:
         if st.button(" 🤖 Ask AI"):
            answer = chat_with_data(user_question, report)
            st.write(answer)
-=======
-    # ✅ SHOW CLEANED DATA (OUTSIDE BUTTON)
-    if st.session_state.cleaned_df is not None:
-        st.subheader("✅ Cleaned Dataset")
-        st.dataframe(st.session_state.cleaned_df.head())
-
-        st.subheader("🧠 Cleaning Report")
-        st.json(st.session_state.cleaning_report)
->>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
