@@ -3,6 +3,7 @@ from .duplicates import check_duplicates
 from .outliers import detect_outliers
 
 def generate_data_quality_report(df):
+<<<<<<< HEAD
     print("Function started 🚀")
     report = {}
 
@@ -63,3 +64,12 @@ def generate_data_quality_report(df):
     report["data_quality_score"] = quality_score
 
     return report   # ✅ ONLY HERE
+=======
+    report = {}
+
+    report["missing_values"] = check_missing_values(df)
+    report["duplicates"] = check_duplicates(df)
+    report["outliers"] = detect_outliers(df)
+
+    return report
+>>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a

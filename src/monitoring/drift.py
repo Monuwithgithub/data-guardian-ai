@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
 from scipy.stats import ks_2samp
 
 def detect_drift(df_old, df_new):
@@ -13,4 +16,7 @@ def detect_drift(df_old, df_new):
         }
 
     return drift_report
+<<<<<<< HEAD
 
+=======
+>>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
