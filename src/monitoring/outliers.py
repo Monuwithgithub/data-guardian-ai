@@ -21,4 +21,8 @@ def detect_outliers(df):
             "upper_bound": upper
         }
 
+<<<<<<< HEAD
     return outlier_summary
+=======
+    return outlier_summary
+>>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
