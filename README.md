@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# data-guardian-ai
-=======
+
 🛡️ Data Guardian AI
 
 Autonomous Data Quality & Debugging System
@@ -87,7 +85,7 @@ Data-Guardian-AI/
 
 1️⃣ Clone the repository
 
-git clone https://github.com/your-username/data-guardian-ai.git
+git clone [https:https://github.com/Monuwithgithub/data-guardian-ai
 
 cd data-guardian-ai
 
