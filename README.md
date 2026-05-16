@@ -81,6 +81,20 @@ Data-Guardian-AI/
 
 └── README.md
 
+UI Immages :
+
+<img width="1885" height="871" alt="image" src="https://github.com/user-attachments/assets/048ef926-93cd-459e-a25b-80e944264e28" />
+
+<img width="1868" height="853" alt="image" src="https://github.com/user-attachments/assets/17f6e6ac-0a90-45e1-9383-006d9883fab4" />
+
+<img width="1881" height="822" alt="image" src="https://github.com/user-attachments/assets/a9d514d0-9d16-49d6-8dd5-ddfe66eaf9f7" />
+
+<img width="1547" height="867" alt="image" src="https://github.com/user-attachments/assets/602c4ecf-0889-4d86-9f05-77009740b2cd" />
+
+Project Demo :
+
+https://drive.google.com/file/d/1kQzjyuHRPABLJnxvQqm_wpODk2eGT6on/view?usp=drive_link
+
 ⚙️ Installation & Setup
 
 1️⃣ Clone the repository
@@ -140,6 +154,4 @@ AI (Planned): LLMs, RAG, AI Agents
 ✅ Dashboard analytics
 
 
-
-
->>>>>>> c4b2cc020bf3aed33d1cb5d33b4d0aec10260f6a
+Live Demo : https://monuwithgithub-data-guardian-ai-appapp-mfnlym.streamlit.app/
