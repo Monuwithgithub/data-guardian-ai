@@ -18,7 +18,7 @@ def generate_ai_insight(report):
             return "❌ API key not found. Please set OPENAI_API_KEY."
             
 
-        API_URL = "https://api.openai.com/v1/chat/completions"
+        API_URL = ""
 
         prompt = f"""
         You are a professional data analyst.
