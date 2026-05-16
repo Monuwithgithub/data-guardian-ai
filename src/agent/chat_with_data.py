@@ -1,5 +1,8 @@
 import requests
 import os
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 
 def chat_with_data(question, report):
     API_KEY = os.getenv("OPENAI_API_KEY")
@@ -27,5 +30,8 @@ def chat_with_data(question, report):
             ]
         }
     )
+
+    if response.status_code != 200:
+        return f"Error from OpenAI API: {response.text}"
 
     return response.json()["choices"][0]["message"]["content"]

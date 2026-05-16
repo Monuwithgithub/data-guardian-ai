@@ -1,5 +1,7 @@
+from dotenv import load_dotenv
 import requests
 import os
+load_dotenv(override=True) 
 
 def generate_ai_insight(report):
     """
@@ -7,10 +9,11 @@ def generate_ai_insight(report):
     """
 
     try:
-        API_KEY = os.getenv("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")
-
+        API_KEY = os.getenv("OPENAI_API_KEY")
+          
         if not API_KEY:
             return "❌ API key not found. Please set OPENAI_API_KEY."
+            
 
         API_URL = "https://api.openai.com/v1/chat/completions"
 
@@ -40,6 +43,7 @@ def generate_ai_insight(report):
                 "temperature": 0.7
             }
         )
+        print("DEBUG KEY:", API_KEY)
 
         if response.status_code != 200:
             return f"❌ API Error: {response.text}"
