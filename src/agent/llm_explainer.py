@@ -9,8 +9,11 @@ def generate_ai_insight(report):
     """
 
     try:
+
         API_KEY = os.getenv("OPENAI_API_KEY")
           
+
+
         if not API_KEY:
             return "❌ API key not found. Please set OPENAI_API_KEY."
             
