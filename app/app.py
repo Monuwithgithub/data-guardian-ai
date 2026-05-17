@@ -160,6 +160,7 @@ if uploaded_file is not None:
                 border-left:6px solid #4CAF50;
                 font-size:16px;
                 line-height:1.6;
+                color: #000000;
                  ">
                 {insight}
                    </div>
