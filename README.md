@@ -121,6 +121,26 @@ Then open in browser:
 
 http://localhost:8501
 
+🔐 API key (local + Streamlit Cloud)
+
+The OpenAI key must **not** be committed to GitHub. Use one of these:
+
+**Local development** — create a `.env` file in the project root:
+
+```
+OPENAI_API_KEY=sk-your-key-here
+```
+
+**Streamlit Cloud** — after you deploy, open your app on [share.streamlit.io](https://share.streamlit.io), go to **App settings → Secrets**, and paste:
+
+```toml
+OPENAI_API_KEY = "sk-your-key-here"
+```
+
+Save and reboot the app. The deployed app reads the key from Streamlit secrets (not from `.env`, which is not uploaded).
+
+See `.streamlit/secrets.toml.example` for the same format used locally (copy to `.streamlit/secrets.toml` if you prefer secrets over `.env`).
+
 🧠 How It Works
 
 Upload a dataset (CSV)

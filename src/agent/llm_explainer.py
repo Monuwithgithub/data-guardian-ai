@@ -1,7 +1,7 @@
-from dotenv import load_dotenv
 import requests
-import os
-load_dotenv(override=True) 
+
+from src.utils.config import get_openai_api_key
+
 
 def generate_ai_insight(report):
     """
@@ -10,12 +10,13 @@ def generate_ai_insight(report):
 
     try:
 
-        API_KEY = os.getenv("OPENAI_API_KEY")
-          
-
+        API_KEY = get_openai_api_key()
 
         if not API_KEY:
-            return "❌ API key not found. Please set OPENAI_API_KEY."
+            return (
+                "❌ API key not found. Set OPENAI_API_KEY in a local .env file, "
+                "or add it under Streamlit Cloud → App settings → Secrets."
+            )
             
 
         API_URL = "https://api.openai.com/v1/chat/completions" 
@@ -46,8 +47,6 @@ def generate_ai_insight(report):
                 "temperature": 0.7
             }
         )
-        print("DEBUG KEY:", API_KEY)
-
         if response.status_code != 200:
             return f"❌ API Error: {response.text}"
 
