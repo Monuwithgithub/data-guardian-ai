@@ -91,6 +91,9 @@ UI Immages :
 
 <img width="1547" height="867" alt="image" src="https://github.com/user-attachments/assets/602c4ecf-0889-4d86-9f05-77009740b2cd" />
 
+<img width="1799" height="763" alt="image" src="https://github.com/user-attachments/assets/90a8fc87-e391-444d-a8e3-0a448c3d71c9" />
+
+
 Project Demo :
 
 https://drive.google.com/file/d/1kQzjyuHRPABLJnxvQqm_wpODk2eGT6on/view?usp=drive_link
