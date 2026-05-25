@@ -174,4 +174,4 @@ AI (Planned): LLMs, RAG, AI Agents
 ✅ Dashboard analytics
 
 
-Live Demo : https://monuwithgithub-data-guardian-ai-appapp-mfnlym.streamlit.app/
+Live Demo : https://data-guardian-ai-wpe2wu9aaaw7n3wy6jeywu.streamlit.app/
